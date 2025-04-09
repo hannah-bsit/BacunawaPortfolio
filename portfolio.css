@@ -1,0 +1,214 @@
+
+:root {
+    --primary-color: #4A2B28;
+    --secondary-color: #A7726D;
+    --accent-color: #8a5a56;
+    --background-color: #F2E9E4;
+    --white: #FFFFFF;
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========== BASE STYLES ========== */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    animation: fadeIn 1s ease-in-out;
+}
+
+
+header {
+    background-color: var(--white);
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    animation: slideInLeft 1s ease-in-out;
+    text-align: center;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.main-nav {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.nav-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-left, .nav-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-left {
+    align-items: flex-end;
+    padding-right: 30px;
+}
+
+.nav-right {
+    align-items: flex-start;
+    padding-left: 30px;
+}
+
+.nav-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 1rem;
+    text-align: center;
+    min-width: 120px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+.nav-button:hover, .nav-button.active {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* ========== MAIN CONTENT STYLES ========== */
+.portfolio-main {
+    padding: 40px 20px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-title {
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.portfolio-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.portfolio-box {
+    background-color: var(--white);
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    overflow: hidden;
+    position: relative;
+}
+
+.portfolio-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.portfolio-btn {
+    background-color: var(--secondary-color);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 1.25rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.portfolio-btn:hover {
+    background-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { 
+        transform: translateX(-100%); 
+        opacity: 0; 
+    }
+    to { 
+        transform: translateX(0); 
+        opacity: 1; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    .nav-columns {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .nav-left, .nav-right {
+        align-items: center;
+        padding: 0;
+        gap: 15px;
+    }
+    
+    .portfolio-title {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .portfolio-box {
+        min-height: 200px;
+    }
+    
+    .portfolio-btn {
+        padding: 12px 24px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-title {
+        font-size: 1.8rem;
+    }
+    
+    .portfolio-box {
+        min-height: 180px;
+    }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY PORTFOLIO</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/logo.png" alt="My Portfolio Logo" class="logo">
+            <nav class="main-nav">
+                <div class="nav-columns">
+                    <div class="nav-left">
+                        <a href="Home.html" class="nav-button">Home</a>
+                        <a href="Contact.html" class="nav-button">CONTACT</a>
+                    </div>
+                    <div class="nav-right">
+                        <a href="About.html" class="nav-button">ABOUT</a>
+                        <a href="Portfolio.html" class="nav-button active">PORTFOLIO</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="portfolio-main">
+        <h1 class="portfolio-title">MY PORTFOLIO</h1>
+        
+        <div class="portfolio-container">
+            <div class="portfolio-box" onclick="window.location.href='skills.html'">
+                <button class="portfolio-btn skill-btn">My Skills</button>
+            </div>
+            <div class="portfolio-box" onclick="window.location.href='achievement.html'">
+                <button class="portfolio-btn achievement-btn">My Achievements</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

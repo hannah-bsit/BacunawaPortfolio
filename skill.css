@@ -1,0 +1,204 @@
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #F2E9E4;
+  animation: fadeIn 1s ease-in-out;
+}
+
+header {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: slideInLeft 1s ease-in-out;
+  text-align: center;
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+header img[src="logo.png"] {
+  display: block;
+  max-width: 100px;
+  height: auto;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.menus {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.menu-column {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+
+.left-column {
+  align-items: flex-end;
+}
+
+.right-column {
+  align-items: flex-start;
+}
+
+.menu-button {
+  background-color: #A7726D;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin: 5px 0;
+  animation: slideUp 1s ease-in-out;
+  width: 120px;
+  text-align: center;
+}
+
+.menu-button a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+  background-color: #F2E9E4;
+}
+
+.header h1 {
+  color: #4A2B28;
+  margin: 0;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skill-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.5s ease-in-out;
+  transition: all 0.3s ease;
+  width: 48%;
+}
+
+.left-frame {
+  margin-right: 2%;
+}
+
+.right-frame {
+  margin-left: 2%;
+}
+
+.skill-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.frame {
+  margin: 0;
+  text-align: center;
+}
+
+.skill-image, .skill-video {
+  border: 2px solid #A7726D;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+.skill-image:hover, .skill-video:hover {
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+figcaption {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #4A2B28;
+}
+
+hr {
+  border-color: #A7726D;
+  margin: 20px 0;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+a:hover {
+  color: #4A2B28;
+}
+
+
+@media (max-width: 768px) {
+  .menus {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .menu-column {
+    margin: 0;
+    width: 100%;
+    align-items: center !important;
+  }
+  
+  .menu-button {
+    width: 80%;
+    margin: 5px 0;
+  }
+  
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .skill-box {
+    width: 90%;
+    margin: 10px 0 !important;
+  }
+  
+  .skill-image, .skill-video {
+    width: 100%;
+    max-width: 300px;
+  }
+}
